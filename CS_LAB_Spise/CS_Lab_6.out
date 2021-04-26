@@ -1,0 +1,106 @@
+
+**** 06/11/20 12:45:59 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\Pc\Documents\CS_LAB_Spise\CS_Lab_6.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Thu Jun 11 12:39:42 2020
+
+
+
+** Analysis setup **
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "CS_Lab_6.net"
+
+**** INCLUDING CS_Lab_6.net ****
+* Schematics Netlist *
+
+
+
+V_V1         $N_0001 0 5v
+R_R3         $N_0002 $N_0001  1k  
+R_R1         0 $N_0002  2k  
+R_R2         0 $N_0002  10k  
+
+**** RESUMING CS_Lab_6.cir ****
+.INC "CS_Lab_6.als"
+
+
+
+**** INCLUDING CS_Lab_6.als ****
+* Schematics Aliases *
+
+.ALIASES
+V_V1            V1(+=$N_0001 -=0 )
+R_R3            R3(1=$N_0002 2=$N_0001 )
+R_R1            R1(1=0 2=$N_0002 )
+R_R2            R2(1=0 2=$N_0002 )
+.ENDALIASES
+
+
+**** RESUMING CS_Lab_6.cir ****
+.probe
+
+
+.END
+
+**** 06/11/20 12:45:59 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\Pc\Documents\CS_LAB_Spise\CS_Lab_6.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+($N_0001)    5.0000                   ($N_0002)    3.1250                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -1.875E-03
+
+    TOTAL POWER DISSIPATION   9.38E-03  WATTS
+
+
+**** 06/11/20 12:45:59 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\Pc\Documents\CS_LAB_Spise\CS_Lab_6.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .02
+

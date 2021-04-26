@@ -1,0 +1,23 @@
+* C:\Users\Pc\Documents\CS_LAB_Spise\Ohms_Law.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Thu Mar 05 11:50:05 2020
+
+
+
+** Analysis setup **
+.DC LIN V_V1 -20 20 1 
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Ohms_Law.net"
+.INC "Ohms_Law.als"
+
+
+.probe
+
+
+.END

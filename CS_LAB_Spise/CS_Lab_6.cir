@@ -1,0 +1,22 @@
+* C:\Users\Pc\Documents\CS_LAB_Spise\CS_Lab_6.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Thu Jun 11 12:39:42 2020
+
+
+
+** Analysis setup **
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "CS_Lab_6.net"
+.INC "CS_Lab_6.als"
+
+
+.probe
+
+
+.END

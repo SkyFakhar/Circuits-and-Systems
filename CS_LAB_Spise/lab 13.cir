@@ -1,0 +1,22 @@
+* C:\Users\Pc\Documents\CS_LAB_Spise\lab 13.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Wed Aug 05 09:30:00 2020
+
+
+
+** Analysis setup **
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "lab 13.net"
+.INC "lab 13.als"
+
+
+.probe
+
+
+.END

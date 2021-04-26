@@ -1,0 +1,103 @@
+
+**** 03/12/20 10:48:41 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\Pc\Documents\CS_LAB_Spise\Ohms_Law.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Thu Mar 05 11:50:05 2020
+
+
+
+** Analysis setup **
+.DC LIN V_V1 -20 20 1 
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Ohms_Law.net"
+
+**** INCLUDING Ohms_Law.net ****
+* Schematics Netlist *
+
+
+
+R_R1         0 $N_0001  2k  
+V_V1         $N_0001 0 5v
+
+**** RESUMING Ohms_Law.cir ****
+.INC "Ohms_Law.als"
+
+
+
+**** INCLUDING Ohms_Law.als ****
+* Schematics Aliases *
+
+.ALIASES
+R_R1            R1(1=0 2=$N_0001 )
+V_V1            V1(+=$N_0001 -=0 )
+.ENDALIASES
+
+
+**** RESUMING Ohms_Law.cir ****
+.probe
+
+
+.END
+
+**** 03/12/20 10:48:41 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\Pc\Documents\CS_LAB_Spise\Ohms_Law.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+($N_0001)    5.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -2.500E-03
+
+    TOTAL POWER DISSIPATION   1.25E-02  WATTS
+
+
+**** 03/12/20 10:48:41 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\Pc\Documents\CS_LAB_Spise\Ohms_Law.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME            0.00
+

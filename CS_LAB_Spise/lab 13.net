@@ -1,0 +1,8 @@
+* Schematics Netlist *
+
+
+
+V_V1         $N_0001 0 30V
+R_R2         $N_0001 0  1 ohm  
+R_R1         $N_0001 $N_0002  4 ohm  
+R_R3         $N_0002 0  12 ohm  

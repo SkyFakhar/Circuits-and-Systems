@@ -1,0 +1,64 @@
+
+**** 08/05/20 09:20:43 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\Pc\Documents\CS_LAB_Spise\complex_matlab_analysis.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Wed Aug 05 09:20:39 2020
+
+
+
+** Analysis setup **
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "complex_matlab_analysis.net"
+
+**** INCLUDING complex_matlab_analysis.net ****
+* Schematics Netlist *
+
+
+
+V_V1         0 0 200V
+R_R3         $N_0001 0  4ohm  
+R_R4         0 $N_0001  1 ohm  
+-------------------------------$
+ERROR -- Missing value
+R_R1         0 0  7 ohm  
+-------------------------$
+ERROR -- Missing value
+
+**** RESUMING complex_matlab_analysis.cir ****
+.INC "complex_matlab_analysis.als"
+
+
+
+**** INCLUDING complex_matlab_analysis.als ****
+* Schematics Aliases *
+
+.ALIASES
+V_V1            V1(+=0 -=0 )
+R_R3            R3(1=$N_0001 2=0 )
+R_R4            R4(1=0 2=$N_0001 )
+R_R1            R1(1=0 2=0 )
+.ENDALIASES
+
+
+**** RESUMING complex_matlab_analysis.cir ****
+.probe
+
+
+.END
+

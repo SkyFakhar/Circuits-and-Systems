@@ -1,0 +1,66 @@
+
+**** 08/05/20 09:31:04 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\Pc\Documents\CS_LAB_Spise\lab 13.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Wed Aug 05 09:30:00 2020
+
+
+
+** Analysis setup **
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "lab 13.net"
+
+**** INCLUDING "lab 13.net" ****
+* Schematics Netlist *
+
+
+
+V_V1         $N_0001 0 30V
+R_R2         $N_0001 0  1 ohm  
+-------------------------------$
+ERROR -- Missing value
+R_R1         $N_0001 $N_0002  4 ohm  
+-------------------------------------$
+ERROR -- Missing value
+R_R3         $N_0002 0  12 ohm  
+--------------------------------$
+ERROR -- Missing value
+
+**** RESUMING "lab 13.cir" ****
+.INC "lab 13.als"
+
+
+
+**** INCLUDING "lab 13.als" ****
+* Schematics Aliases *
+
+.ALIASES
+V_V1            V1(+=$N_0001 -=0 )
+R_R2            R2(1=$N_0001 2=0 )
+R_R1            R1(1=$N_0001 2=$N_0002 )
+R_R3            R3(1=$N_0002 2=0 )
+.ENDALIASES
+
+
+**** RESUMING "lab 13.cir" ****
+.probe
+
+
+.END
+
